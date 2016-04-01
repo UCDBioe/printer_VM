@@ -1,0 +1,4 @@
+.DS_Store
+vagrant_VMs/.DS_Store
+*.swp
+.vagrant
