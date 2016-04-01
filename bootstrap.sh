@@ -58,7 +58,7 @@ usermod -a -G dialout vagrant
 condafile=Anaconda3-2.5.0-Linux-x86_64.sh
 
 cd /home/vagrant/Downloads
-wget -q --show-progress http://repo.continuum.io/archive/$condafile 
+wget -q http://repo.continuum.io/archive/$condafile 
 chmod +x $condafile
 ./$condafile -b -p /home/vagrant/anaconda
 
@@ -70,9 +70,12 @@ echo -e "export PATH=\"/home/vagrant/anaconda/bin:$PATH\"" >> /home/vagrant/.bas
 PATH=$PATH:/home/vagrant/anaconda/bin 
 
 conda --version
-conda create -y --name bioprint python=2.7 pyserial wxpython pycairo numpy
+# create conda virtual env for printer UI
+conda create -y --name bioprint_UI pyserial matplotlib
+# create conda virtual env for pronterface
+conda create -y --name bioprint_pronterface python=2.7 pyserial wxpython pycairo numpy
 
-source activate bioprint 
+source activate bioprint_pronterface 
 
 pip install --upgrade pip
 
