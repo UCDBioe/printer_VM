@@ -59,8 +59,8 @@ usermod -a -G dialout vagrant
 # Install anaconda
 condafile=Anaconda3-2.5.0-Linux-x86_64.sh
 
-#cd /home/vagrant/Downloads
-wget -q -O /home/vagrant/Downloads http://repo.continuum.io/archive/$condafile 
+cd /home/vagrant/Downloads
+wget -q http://repo.continuum.io/archive/$condafile 
 chmod +x $condafile
 ./$condafile -b -p /home/vagrant/anaconda
 
