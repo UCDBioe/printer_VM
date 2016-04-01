@@ -71,7 +71,7 @@ Vagrant.configure(2) do |config|
 
   #config.vm.provision "file", source: "provisioning_files/Anaconda3-2.5.0-Linux-x86_64.sh", destination: "~/Downloads/Anaconda3-2.5.0-Linux-x86_64.sh"
   #config.vm.provision "file", source: "provisioning_files/arduino-1.6.8-linux64.tar.xz", destination: "~/Downloads/arduino-1.6.8-linux64.tar.xz"
-  config.vm.provision "file", source: "provisioning_files/Printrun", destination: "~/Printrun"
+  #config.vm.provision "file", source: "provisioning_files/Printrun", destination: "~/Printrun"
   config.vm.provision "file", source: "provisioning_files/.vimrc", destination: "~/.vimrc"
   config.vm.provision "shell", path: "bootstrap.sh"
 end
