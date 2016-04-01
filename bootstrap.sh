@@ -86,8 +86,11 @@ conda install -y -c http://conda.anaconda.org/erik pyglet1.2
 
 source deactivate 
 
+chown -R --quiet vagrant:vagrant /home/vagrant/anaconda
+chown -R --quiet vagrant:vagrant /home/vagrant/.vim 
+chown -R --quiet vagrant:vagrant /home/vagrant/Printrun
+
 # May need to do this after uagrant up
-#chown -R vagrant:vagrant anaconda
 # chmod a+rw /dev/ttyACM0
 
 echo "!-!-! Run :PluginInstall from vim when VM is running !-!-!"
