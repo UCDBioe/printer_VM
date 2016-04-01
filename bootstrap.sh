@@ -34,7 +34,7 @@ echo "--------- Install Vundle --------"
 git clone https://github.com/VundleVim/Vundle.vim.git /home/vagrant/.vim/bundle/Vundle.vim
 
 # Install pronterface
-wget -q -O /home/vagrant/Printrun https://github.com/UCDBioe/Printrun.git
+git clone https://github.com/UCDBioe/Printrun.git /home/vagrant/Printrun
 
 apt-get install -y python-serial python-wxgtk2.8 python-pyglet python-numpy cython python-libxml2 python-gobject python-dbus python-psutil python-cairosvg
 
@@ -59,7 +59,7 @@ usermod -a -G dialout vagrant
 # Install anaconda
 condafile=Anaconda3-2.5.0-Linux-x86_64.sh
 
-cd /home/vagrant/Downloads
+#cd /home/vagrant/Downloads
 wget -q -O /home/vagrant/Downloads http://repo.continuum.io/archive/$condafile 
 chmod +x $condafile
 ./$condafile -b -p /home/vagrant/anaconda
