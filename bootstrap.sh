@@ -58,7 +58,7 @@ usermod -a -G dialout vagrant
 condafile=Anaconda3-2.5.0-Linux-x86_64.sh
 
 cd /home/vagrant/Downloads
-#wget -q --show-progress http://repo.continuum.io/archive/Anaconda3-2.5.0-Linux-x86_64.sh 
+wget -q --show-progress http://repo.continuum.io/archive/$condafile 
 chmod +x $condafile
 ./$condafile -b -p /home/vagrant/anaconda
 
